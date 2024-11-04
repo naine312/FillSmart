@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'; // Import axios
 import { FaCar } from 'react-icons/fa';
 import CarDetailsForm from '../CarDetailsForm/CarDetailsForm';
-import Loader from 'react-loader';
+import { ClipLoader } from 'react-spinners';
 
 const DashboardPage = () => {
   const [showForm, setShowForm] = useState(true);
@@ -41,11 +41,11 @@ const DashboardPage = () => {
   };
 
   if (loading) {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <Loader type="ThreeDots" color="#4fa94d" height={80} width={80} /> {/* Adjust type, color, height, and width as needed */}
-    </div>
-  ); // Display loading indicator; // Show loading state
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <ClipLoader color="#4fa94d" size={80} /> {/* Replace with ClipLoader from react-spinners */}
+      </div>
+    );
   }
 
   return (

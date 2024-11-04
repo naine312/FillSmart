@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Loader from 'react-loader';
+import { ClipLoader } from 'react-spinners';
 
 
 const FuelInfoList = () => {
@@ -27,9 +28,9 @@ const FuelInfoList = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <Loader type="ThreeDots" color="#4fa94d" height={80} width={80} /> {/* Adjust type, color, height, and width as needed */}
+        <ClipLoader color="#4fa94d" size={80} /> {/* Replace with ClipLoader from react-spinners */}
       </div>
-    ); // Display loading indicator
+    );
   }
 
   if (error) {
