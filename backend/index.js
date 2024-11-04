@@ -139,6 +139,6 @@ app.use((err, req, res, next) => {
   res.status(401).send("Unauthenticated!");
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(3000, () => {
+  console.log(`Server is running on port 3000`);
 });
